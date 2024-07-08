@@ -20,9 +20,10 @@ Validate Textbox Operations
     Verify Text Box is Visible
     Verify Text Box is Enabled
     Verify Text Box is Disabled
+    Verify Text Box is Readonly
     Verify Text Box is Empty
     Enter The Text
-    Verify Entered the text is correct
+    Verify Entered text is correct
     Clear The Text
     Verify Text Box is Empty
     Update the Text
@@ -36,7 +37,7 @@ Open Browser and navigate to URL
     New Page    ${URL}
 
 Verify Label is Visible
-    Wait For Elements State    ${label}    visible
+    Wait For Elements State    ${label}     visible
 
 Verify Text Box is Visible
     Wait For Elements State    ${fullname_textbox}    visible
@@ -57,7 +58,7 @@ Verify Text Box is Empty
 Enter The Text
     Type Text    ${fullname_textbox}    Bharat
 
-Verify Entered the text is correct
+Verify Entered text is correct
     ${text}=    Get Text    ${fullname_textbox}
     Should Be Equal    ${text}    Bharat
     
