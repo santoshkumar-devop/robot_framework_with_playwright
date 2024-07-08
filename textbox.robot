@@ -27,7 +27,7 @@ Validate Textbox Operations
     Clear The Text
     Verify Text Box is Empty
     Update the Text
-    Verify Text Box is Updated
+    Verify Text is Updated
     Take a Screenshot
 
 
@@ -73,11 +73,10 @@ Update the Text
     ${new_text}=    Set Variable    ${text} Updated
     Clear Text    ${fullname_textbox}
     Type Text    ${fullname_textbox}    ${new_text}
-    Set Test Variable    ${new_text}
 
-Verify Text Box is Updated
+Verify Text is Updated
     ${text}=    Get Text    ${fullname_textbox}
-    Should Be Equal    ${text}    ${new_text}
+    Should Be Equal    ${text}    Bharat Updated
 
 Take a Screenshot
     Take Screenshot    text_box_operations.png
