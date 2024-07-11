@@ -19,10 +19,10 @@ Validate Checkbox Operations
     Validate Checkbox is Selected By Default - second way
     Validate Checkbox is Clickable - uncheck
     Validate Checkbox is Clickable - uncheck - second way
-    Validate Checkbox is Checked
-    Validate Checkbox is Checked - second way
-    Validate Checkbox is Unchecked
-    Validate Checkbox is Unchecked - second way
+    Validate Checkbox is Selected
+    Validate Checkbox is Selected - second way
+    Validate Checkbox is Not_Selected
+    Validate Checkbox is Not_Selected - second way
 
 
 *** Keywords ***
@@ -53,22 +53,22 @@ Validate Checkbox is Clickable - uncheck
 Validate Checkbox is Clickable - uncheck - second way
     Wait For Elements State    ${checkbox}    unchecked
 
-Validate Checkbox is Checked
+Validate Checkbox is Selected
     Click    ${checkbox}
     ${element}=    Get Element    ${checkbox}
     ${element_state}=    Get Property    ${element}    checked
     Should Be True    '${element_state}' == 'True'
 
-Validate Checkbox is Checked - second way
+Validate Checkbox is Selected - second way
     Wait For Elements State    ${checkbox}    checked
 
-Validate Checkbox is Unchecked
+Validate Checkbox is Not_Selected
     Click    ${checkbox}
     ${element}=    Get Element    ${checkbox}
     ${element_state}=    Get Property    ${element}    checked
     Should Be True    '${element_state}' == 'False'
 
-Validate Checkbox is Unchecked - second way
+Validate Checkbox is Not_Selected - second way
     Wait For Elements State    ${checkbox}    unchecked
 
 Close The Browser
