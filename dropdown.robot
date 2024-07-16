@@ -65,7 +65,7 @@ Validate Value can be selected by label
     Select Options By    ${fruits_dropdown}    label    ${select_label}
     ${selected_values}    Get Selected Options    ${fruits_dropdown}
     FOR  ${fruit}   IN  @{fruits}
-        ${notification}=    Set Variable    //p[@class='subtitle' and contains(., '${fruit}')]
+        ${notification}=    Set Variable    //p[@class='subtitle' and contains(., 'You have selected ${fruit}')]
         IF  '${fruit}' == '${select_label}'
             List Should Contain Value    ${selected_values}    ${fruit}
             Wait For Elements State    ${notification}    visible
@@ -80,7 +80,7 @@ Validate Value can be selected by index
     Select Options By    ${fruits_dropdown}    index  3
     ${selected_values}    Get Selected Options    ${fruits_dropdown}
     FOR  ${fruit}   IN  @{fruits}
-        ${notification}=    Set Variable    //p[@class='subtitle' and contains(., '${fruit}')]
+        ${notification}=    Set Variable    //p[@class='subtitle' and contains(., 'You have selected ${fruit}')]
         IF  '${fruit}' == '${select_index}'
             List Should Contain Value    ${selected_values}    ${fruit}
             Wait For Elements State    ${notification}    visible
@@ -95,7 +95,7 @@ Validate Value can be selected by value
     Select Options By    ${fruits_dropdown}    value    1
     ${selected_values}    Get Selected Options    ${fruits_dropdown}
     FOR  ${fruit}   IN  @{fruits}
-        ${notification}=    Set Variable    //p[@class='subtitle' and contains(., '${fruit}')]
+        ${notification}=    Set Variable    //p[@class='subtitle' and contains(., 'You have selected ${fruit}')]
         IF  '${fruit}' == '${select_value}'
             List Should Contain Value    ${selected_values}    ${fruit}
             Wait For Elements State    ${notification}    visible
